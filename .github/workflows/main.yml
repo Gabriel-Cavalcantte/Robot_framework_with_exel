@@ -27,6 +27,7 @@ jobs:
     - name: Install libraries for robot
       run: |
           pip install -U pip
+          python -c "import RPA"
           pip install robotframework-excel==1.0.0b4
           openpyxl==2.5.1
           pip install robotframework-excel --upgrade
