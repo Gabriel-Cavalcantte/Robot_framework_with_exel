@@ -27,11 +27,32 @@ jobs:
     - name: Install libraries for robot
       run: |
           pip install -U pip
-          pip install robotframework-excel
+          pip install robotframework-excel==1.0.0b4
+          openpyxl==2.5.1
+          pip install robotframework-excel --upgrade
           pip install -r requirements.txt
     - name: Run Tests
       run: |
             mkdir results
-            robot   ./test/test_integration.robot
-
-
+            robot -d ./reports ./robot_tests
+    - name: Upload test results
+      uses: actions/upload-artifact@v1
+      if: always()
+      with:
+        name: reports
+        path: reports
+        
+  generate_report:
+        if: always()
+        needs: [run_automation] 
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v2
+        - name: Download reports
+          uses: actions/download-artifact@v1
+          with:
+            name: reports
+        - name: Send report to commit
+          uses: joonvena/robotframework-reporter-action@v2
+          with:
+            gh_access_token: ${{ secrets.GITHUB_TOKEN }}
