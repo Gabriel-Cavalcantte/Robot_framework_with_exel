@@ -32,7 +32,7 @@ jobs:
         robot -d ./results ./tests/test_integration.robot
 
     - name: Upload dos Resultados dos Testes
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: results
@@ -47,9 +47,10 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Baixar Resultados dos Testes
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: results
+        path: results
 
     - name: Gerar e Enviar Relatório
       uses: joonvena/robotframework-reporter-action@v2
