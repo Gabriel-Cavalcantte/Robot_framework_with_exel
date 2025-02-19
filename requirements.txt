@@ -1,6 +1,4 @@
 robotframework==6.1.1
 selenium==4.11.2
-rpaframework==26.1.1
-robotframework-requests==0.9.5
 robotframework-seleniumlibrary==6.1.1
 robotframework-excellib==2.0.1
