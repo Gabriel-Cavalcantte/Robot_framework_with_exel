@@ -47,7 +47,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: results
-        path: results
+        path: reports
 
     - name: Gerar e Enviar Relatório
       uses: joonvena/robotframework-reporter-action@v2
