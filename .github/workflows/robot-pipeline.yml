@@ -10,12 +10,7 @@ jobs:
     - name: Checkout do código
       uses: actions/checkout@v4
 
-    - name: Instalar Dependências do Python
-      run: |
-        sudo apt update
-        sudo apt install -y python3.10 python3.10-venv python3.10-dev
-
-    - name: Verificar Versão do Python
+    - name: Verificar versão do Python (já instalado no Ubuntu)
       run: python3 --version
 
     - name: Configurar ambiente virtual e instalar dependências
