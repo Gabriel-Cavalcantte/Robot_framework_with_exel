@@ -52,6 +52,6 @@ jobs:
         name: results
 
     - name: Gerar e Enviar Relatório
-      uses: joonvena/robotframework-reporter-action@v2
+      uses: Gabriel/robotframework-reporter-action@v2
       with:
         gh_access_token: ${{ secrets.GITHUB_TOKEN }}
