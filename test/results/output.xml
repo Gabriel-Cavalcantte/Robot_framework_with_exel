@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.4 on win32)" generated="20250218 22:32:16.487" rpa="false" schemaversion="4">
+<suite id="s1" name="Test Integration" source="C:\Users\gabri\OneDrive\Documentos\Repositorio\Robot_framework_with_exel\test\test_integration.robot">
+<test id="s1-t1" name="Cenário: Criar um arquivo Excel e gravar um dado com sucesso" line="7">
+<kw name="Dado que um novo arquivo Excel foi criado com sucesso" library="resource">
+<kw name="Create Excel Document" library="ExcelLibrary">
+<var>${document}</var>
+<arg>teste</arg>
+<doc>Creates new excel document.</doc>
+<msg timestamp="20250218 22:32:16.775" level="INFO">${document} = teste</msg>
+<status status="PASS" starttime="20250218 22:32:16.774" endtime="20250218 22:32:16.775"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>teste</arg>
+<arg>${document}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20250218 22:32:16.776" endtime="20250218 22:32:16.776"/>
+</kw>
+<kw name="Save Excel Document" library="ExcelLibrary">
+<arg>filename=${path}</arg>
+<doc>Saves the current document to disk.</doc>
+<status status="PASS" starttime="20250218 22:32:16.776" endtime="20250218 22:32:16.781"/>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20250218 22:32:16.781" endtime="20250218 22:32:16.782"/>
+</kw>
+<status status="PASS" starttime="20250218 22:32:16.774" endtime="20250218 22:32:16.782"/>
+</kw>
+<kw name="Quando um dado é escrito na planilha" library="resource">
+<kw name="Open Excel Document" library="ExcelLibrary">
+<arg>filename=${path}</arg>
+<arg>doc_id=teste</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" starttime="20250218 22:32:16.782" endtime="20250218 22:32:16.807"/>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<arg>row_num=1</arg>
+<arg>col_num=1</arg>
+<arg>value=Test1</arg>
+<arg>sheet_name=Sheet</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" starttime="20250218 22:32:16.807" endtime="20250218 22:32:16.807"/>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<arg>row_num=1</arg>
+<arg>col_num=2</arg>
+<arg>value=Pikachu</arg>
+<arg>sheet_name=Sheet</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" starttime="20250218 22:32:16.807" endtime="20250218 22:32:16.807"/>
+</kw>
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<arg>row_num=1</arg>
+<arg>col_num=3</arg>
+<arg>value=Charmander</arg>
+<arg>sheet_name=Sheet</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" starttime="20250218 22:32:16.807" endtime="20250218 22:32:16.807"/>
+</kw>
+<kw name="Save Excel Document" library="ExcelLibrary">
+<arg>filename=${path}</arg>
+<doc>Saves the current document to disk.</doc>
+<status status="PASS" starttime="20250218 22:32:16.807" endtime="20250218 22:32:16.812"/>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20250218 22:32:16.812" endtime="20250218 22:32:16.812"/>
+</kw>
+<status status="PASS" starttime="20250218 22:32:16.782" endtime="20250218 22:32:16.812"/>
+</kw>
+<kw name="Então que o dado deve ser salvo no arquivo" library="resource">
+<kw name="Open Excel Document" library="ExcelLibrary">
+<arg>filename=${path}</arg>
+<arg>doc_id=teste</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" starttime="20250218 22:32:16.812" endtime="20250218 22:32:16.826"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<arg>row_num=1</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<status status="PASS" starttime="20250218 22:32:16.826" endtime="20250218 22:32:16.826"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<arg>row_num=1</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<status status="PASS" starttime="20250218 22:32:16.826" endtime="20250218 22:32:16.826"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<arg>row_num=1</arg>
+<arg>col_num=3</arg>
+<doc>Returns content of a cell.</doc>
+<status status="PASS" starttime="20250218 22:32:16.826" endtime="20250218 22:32:16.826"/>
+</kw>
+<kw name="Save Excel Document" library="ExcelLibrary">
+<arg>filename=${path}</arg>
+<doc>Saves the current document to disk.</doc>
+<status status="PASS" starttime="20250218 22:32:16.826" endtime="20250218 22:32:16.831"/>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20250218 22:32:16.831" endtime="20250218 22:32:16.831"/>
+</kw>
+<status status="PASS" starttime="20250218 22:32:16.812" endtime="20250218 22:32:16.831"/>
+</kw>
+<status status="PASS" starttime="20250218 22:32:16.774" endtime="20250218 22:32:16.832"/>
+</test>
+<test id="s1-t2" name="Cenário: Atualizar um dado na planilha" line="12">
+<kw name="Dado que o arquivo Excel foi aberto com sucesso" library="resource">
+<kw name="Open Excel Document" library="ExcelLibrary">
+<arg>filename=${path}</arg>
+<arg>doc_id=teste</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" starttime="20250218 22:32:16.833" endtime="20250218 22:32:16.836"/>
+</kw>
+<status status="PASS" starttime="20250218 22:32:16.833" endtime="20250218 22:32:16.836"/>
+</kw>
+<kw name="Quando o dado é atualizado com um novo valor" library="resource">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<arg>row_num=1</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<status status="PASS" starttime="20250218 22:32:16.836" endtime="20250218 22:32:16.836"/>
+</kw>
+<status status="PASS" starttime="20250218 22:32:16.836" endtime="20250218 22:32:16.836"/>
+</kw>
+<kw name="Então o novo valor deve ser salvo no arquivo" library="resource">
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<arg>row_num=1</arg>
+<arg>col_num=1</arg>
+<arg>value=Test2</arg>
+<arg>sheet_name=Sheet</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" starttime="20250218 22:32:16.837" endtime="20250218 22:32:16.837"/>
+</kw>
+<kw name="Save Excel Document" library="ExcelLibrary">
+<arg>filename=${path}</arg>
+<doc>Saves the current document to disk.</doc>
+<status status="PASS" starttime="20250218 22:32:16.837" endtime="20250218 22:32:16.842"/>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20250218 22:32:16.842" endtime="20250218 22:32:16.842"/>
+</kw>
+<status status="PASS" starttime="20250218 22:32:16.837" endtime="20250218 22:32:16.842"/>
+</kw>
+<status status="PASS" starttime="20250218 22:32:16.832" endtime="20250218 22:32:16.842"/>
+</test>
+<test id="s1-t3" name="Cenário: Adicionar um dado na planilha" line="17">
+<kw name="Dado que o arquivo Excel foi aberto com sucesso" library="resource">
+<kw name="Open Excel Document" library="ExcelLibrary">
+<arg>filename=${path}</arg>
+<arg>doc_id=teste</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" starttime="20250218 22:32:16.843" endtime="20250218 22:32:16.856"/>
+</kw>
+<status status="PASS" starttime="20250218 22:32:16.843" endtime="20250218 22:32:16.856"/>
+</kw>
+<kw name="Quando um novo dado é adicionado à planilha" library="resource">
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<arg>row_num=1</arg>
+<arg>col_num=4</arg>
+<arg>value=Squirtle</arg>
+<arg>sheet_name=Sheet</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" starttime="20250218 22:32:16.856" endtime="20250218 22:32:16.856"/>
+</kw>
+<status status="PASS" starttime="20250218 22:32:16.856" endtime="20250218 22:32:16.856"/>
+</kw>
+<kw name="Então o dado deve ser salvo no arquivo" library="resource">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<arg>row_num=1</arg>
+<arg>col_num=4</arg>
+<doc>Returns content of a cell.</doc>
+<status status="PASS" starttime="20250218 22:32:16.857" endtime="20250218 22:32:16.857"/>
+</kw>
+<kw name="Save Excel Document" library="ExcelLibrary">
+<arg>filename=${path}</arg>
+<doc>Saves the current document to disk.</doc>
+<status status="PASS" starttime="20250218 22:32:16.857" endtime="20250218 22:32:16.861"/>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20250218 22:32:16.862" endtime="20250218 22:32:16.862"/>
+</kw>
+<status status="PASS" starttime="20250218 22:32:16.857" endtime="20250218 22:32:16.862"/>
+</kw>
+<status status="PASS" starttime="20250218 22:32:16.843" endtime="20250218 22:32:16.862"/>
+</test>
+<test id="s1-t4" name="Cenário: Remover um dado na planilha" line="22">
+<kw name="Dado que o arquivo Excel foi aberto com sucesso" library="resource">
+<kw name="Open Excel Document" library="ExcelLibrary">
+<arg>filename=${path}</arg>
+<arg>doc_id=teste</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" starttime="20250218 22:32:16.863" endtime="20250218 22:32:16.875"/>
+</kw>
+<status status="PASS" starttime="20250218 22:32:16.863" endtime="20250218 22:32:16.875"/>
+</kw>
+<kw name="Quando o dado é removido da planilha" library="resource">
+<kw name="Write Excel Cell" library="ExcelLibrary">
+<arg>row_num=1</arg>
+<arg>col_num=1</arg>
+<arg>value=${None}</arg>
+<arg>sheet_name=Sheet</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" starttime="20250218 22:32:16.876" endtime="20250218 22:32:16.876"/>
+</kw>
+<status status="PASS" starttime="20250218 22:32:16.875" endtime="20250218 22:32:16.876"/>
+</kw>
+<kw name="Então deve ser excluído o dado do arquivo" library="resource">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${valor}</var>
+<arg>row_num=1</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20250218 22:32:16.876" level="INFO">${valor} = Test2</msg>
+<status status="PASS" starttime="20250218 22:32:16.876" endtime="20250218 22:32:16.876"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>valor da célula é: ${valor}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250218 22:32:16.876" level="INFO">valor da célula é: Test2</msg>
+<status status="PASS" starttime="20250218 22:32:16.876" endtime="20250218 22:32:16.876"/>
+</kw>
+<kw name="Save Excel Document" library="ExcelLibrary">
+<arg>filename=${path}</arg>
+<doc>Saves the current document to disk.</doc>
+<status status="PASS" starttime="20250218 22:32:16.877" endtime="20250218 22:32:16.881"/>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20250218 22:32:16.881" endtime="20250218 22:32:16.881"/>
+</kw>
+<status status="PASS" starttime="20250218 22:32:16.876" endtime="20250218 22:32:16.881"/>
+</kw>
+<status status="PASS" starttime="20250218 22:32:16.862" endtime="20250218 22:32:16.881"/>
+</test>
+<status status="PASS" starttime="20250218 22:32:16.489" endtime="20250218 22:32:16.882"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Test Integration">Test Integration</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20250218 22:32:16.772" level="ERROR">Error in file 'C:\Users\gabri\OneDrive\Documentos\Repositorio\Robot_framework_with_exel\resource\resource.robot' on line 9: Setting variable '${empty}' failed: Recursive variable definition.</msg>
+</errors>
+</robot>
