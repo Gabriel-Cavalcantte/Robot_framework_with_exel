@@ -26,7 +26,7 @@ jobs:
     - name: Executar Testes
       run: |
         source venv/bin/activate
-        robot -d ./results ./test/test_integration.robot
+        cd test/ && robot -d ./results ./test_integration.robot
 
     - name: Upload dos Resultados dos Testes
       uses: actions/upload-artifact@v4
