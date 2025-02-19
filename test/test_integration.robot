@@ -1,6 +1,6 @@
 *** Settings ***
 
-Resource    ../resource/resource.robot
+Resource    ../src/resource.robot
 
 *** Test Cases ***
 
