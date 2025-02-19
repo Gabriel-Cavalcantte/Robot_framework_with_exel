@@ -24,7 +24,13 @@
 <p><code style="color: green;">pip install -r requirements.txt</code></p>
 
 <p>Para executar os testes, utilize o seguinte comando:</p>
-<p><code style="color: blue;">robot -d ./results ./test_integration.robot</code></p>
+<p>Antes de executar os testes, certifique-se de que está dentro da pasta <strong>tests</strong>. Para isso, utilize o seguinte comando:</p>
+
+<pre><code>cd tests</code></pre>
+
+<p>Em seguida, execute os testes com o seguinte comando:</p>
+
+<pre><code>robot -d ../results test_integration.robot</code></pre>
 
 <ul>
   <li><strong>src</strong> - Diretório onde serão armazenados os arquivos de Keyword.</li>
