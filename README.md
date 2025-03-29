@@ -1,32 +1,47 @@
-## 👋 Olá, eu sou Gabriel!
+<h1 style="color: orange; font-size: 20px;">Robot Framework com Excel</h1>
 
-- 🔭 Atuando como QA
-- 🌱 Estudando Python, Cypress e Robot Framework
+<p>Este projeto demonstra exemplos práticos de automação de testes utilizando Robot Framework.</p>
+<p>A integração com Excel permite criar, ler e modificar dados dinamicamente, facilitando a execução de testes com diferentes cenários e massas de dados.</p>
 
-![Lo-fi Background](https://github.com/Gabriel-Cavalcantte/Gabriel-Cavalcantte/issues/1#issue-2863880886)
+<h1 style="color: orange; font-size: 20px;">Tecnologias Utilizadas</h1>
 
-<div>
-  <a href="https://github.com/Gabriel-Cavalcantte">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Gabriel-Cavalcantte&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gabriel-Cavalcantte&layout=compact&langs_count=7&theme=dark"/>
-</div>
-  
-<h2 align="center"> 🚀 Tecnologias e Ferramentas: </h2>
+<ul>
+  <li><strong>Python:</strong> <a href="https://www.python.org/" style="color: orange;">Python</a></li>
+  <li><strong>Framework de Testes:</strong> <a href="https://robotframework.org/" style="color: orange;">Robot Framework</a></li>
+  <li><strong>Selenium Library:</strong> <a href="https://github.com/robotframework/SeleniumLibrary" style="color: orange;">SeleniumLibrary</a></li>
+  <li><strong>ExcelLibrary:</strong> <a href="https://rawgit.com/peterservice-rnd/robotframework-excellib/master/docs/ExcelLibrary.html" style="color: orange;">ExcelLibrary</a></li>
+</ul>
 
-<div style="display: inline_block"><br>
-  <img align="center" alt="JS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
-  <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-  <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-  <img align="center" alt="Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
-  <img align="center" alt="Cypress" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cypressio/cypressio-original.svg">
-  <img align="center" alt="Robot-Framework" height="30" width="40" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Robot-framework-logo.png">
-</div>
-  
- ##
- 
-<div> 
-  <a href="https://www.linkedin.com/in/gabrieldealmeidacavalcante/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
-  
-  ![Snake animation](https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg)
-</div>
+<h1 style="color: orange; font-size: 20px;">Dependências</h1>
 
+<p>Para instalar as dependências necessárias, execute:</p>
+<p><code style="color: red;">pip install -r requirements.txt</code></p>
+<p>Este comando instalará todas as bibliotecas listadas no arquivo <code>requirements.txt</code>, configurando o ambiente para execução dos testes.</p>
+
+<h1 style="color: orange; font-size: 20px;">Execução dos Testes</h1>
+
+<p>Antes de executar, instale as dependências:</p>
+<p><code style="color: green;">pip install -r requirements.txt</code></p>
+
+<p>Para rodar os testes:</p>
+<p>Acesse a pasta de testes:</p>
+
+<pre><code>cd tests</code></pre>
+
+<p>Execute os testes com:</p>
+
+<pre><code>robot -d ../results test_integration.robot</code></pre>
+
+<h1 style="color: orange; font-size: 20px;">Estrutura do Projeto</h1>
+
+<ul>
+  <li><strong>src</strong> - Armazena arquivos de Keywords</li>
+  <li><strong>test</strong> - Contém os cenários de teste</li>
+  <li><strong>results</strong> - Armazena resultados de execução</li>
+  <li><strong>data</strong> - Contém arquivos Excel (.xlsx)</li>
+</ul>
+
+<h1 style="color: orange; font-size: 20px;">Pipeline CI/CD</h1>
+<p>O projeto inclui automação via GitHub Actions:</p>
+<pre><code>.github/workflows/robot-pipeline.yml</code></pre>
+<p>Executa testes automaticamente e gera relatórios.</p>
